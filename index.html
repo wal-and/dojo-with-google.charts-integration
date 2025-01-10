@@ -1,0 +1,42 @@
+<html lang=pl>
+	<head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <figure">
+            <div id="domID_Lin"></div>
+        </figure>
+
+        <figure">
+            <div id="domID_Col"></div>
+        </figure>
+
+        <figure">
+            <div id="domID_Pie"></div>
+        </figure>
+
+        <script>
+            var dojoConfig = {
+                locale: 'pl',
+                has: {
+                    "dojo-firebug": true,
+                    "dojo-debug-messages": true
+                },
+                baseUrl: "/js",
+                packages: [ { name: "myapp", location: "/js/myapp" }],
+                async: true,
+                deps: ["dojo/parser"],
+                callback: function(parser) {
+                    parser.parse();
+                },
+                waitSeconds: 0,
+                // Get "fresh" resources
+                cacheBust: false,
+                gfxRenderer: "svg,silverlight,vml",
+            };
+        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"></script>
+        <link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/dojo/1.14.1/dijit/themes/tundra/tundra.css">
+        <script type="text/javascript" src="/js/myapp/dojo_AMD_chartDRAW_Controller.js"></script>
+    </body>
+</html>
