@@ -6,14 +6,14 @@ var gcAPI;
 
 /* load google.chart and callback for drawing first chart */
 function init(drawChart){
-    //if (typeof drawChart=="function") {
+    if (typeof drawChart=="function") {
         googLoader.load(function(google) {
             gcAPI=google;
             
             gcAPI.charts.load('current', {packages: ['corechart'],'language': "pl"})
                 .then(drawChart);
         });
-    //};
+    };
 };
 
 /* Set config LineChart, set data or series */
